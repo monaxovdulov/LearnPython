@@ -23,8 +23,16 @@ correct = word
 # создадим анаграмму выбранного слова, в которой буквы будут расставлены хаотично
 jumble = ""
 while word:
-    position = random.randrange(len(word))
-    jumble += word[position]
+    # допустим в word строка "питон"
+    # допустим в position будет 3
+    position = random.randrange(len(word))  # тогда len(word) = 5
+
+    # jumble = "" + "о"
+    jumble = jumble + word[position]
+
+    # word[:position] - "пит"
+    # word[(position + 1):] - "н"
+    # word = "пит" + "н"
     word = word[:position] + word[(position + 1):]
 
 # начало игры
@@ -33,7 +41,6 @@ print("""
     Надо переставить буквы так. чтобы получилось осмысленное слово.
 (Для выхода нажмите Enter, не вводя своей версии.
 """)
-
 
 print("Boт анаграмма:", jumble)
 
@@ -48,4 +55,3 @@ if guess == correct:
 print("Спасибо за игру.")
 
 input("\n\nHaжмитe Enter. чтобы выйти")
-

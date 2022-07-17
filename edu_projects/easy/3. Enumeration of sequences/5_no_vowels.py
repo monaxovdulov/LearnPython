@@ -21,6 +21,7 @@ new_message = '"'
 # Если одно и то же неизменное значение встречается в коде в нескольких местах,
 # это повод создать константу.
 
+
 VOWELS = "ёуеыаоэяию"
 print()
 for letter in message:
@@ -29,3 +30,4 @@ for letter in message:
 print("Создана новая строка: ", new_message)
 print("\nBoт ваш текст с изъятыми гласными буквами:", new_message)
 input("\n\nHaжмитe Enter. чтобы выйти.")
+
