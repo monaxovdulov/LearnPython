@@ -2,17 +2,18 @@
 #
 # Компьютер выбирает какое-пибо слово и хаотически переставляет его буквы
 # Задача иrрока - восстановить исходное слово
-"""
-Алгоритм
-создать пустую анаграмму
-до тех пор пока исходное слово содержит хотя бы одну букву:
-изъять из слова случайную букву
-присоединить эту букву к анаграмме"""
 
 import random
 
-# создадим последовательность слов. из которых компьютер будет выбирать
-WORDS = ("питон", "анаграмма", "простая", "сложная", "ответ", "подстаканник")
+WORDS = []
+
+f = open('words.txt', 'r', encoding='utf-8')
+for word in f.readlines():
+    WORDS.append(word.replace('\n', ''))
+f.close()
+
+print(WORDS)
+
 
 # случайным образом выберем из последовательности одно слово
 word = random.choice(WORDS)
@@ -23,16 +24,8 @@ correct = word
 # создадим анаграмму выбранного слова, в которой буквы будут расставлены хаотично
 jumble = ""
 while word:
-    # допустим в word строка "питон"
-    # допустим в position будет 3
-    position = random.randrange(len(word))  # тогда len(word) = 5
-
-    # jumble = "" + "о"
+    position = random.randrange(len(word))
     jumble = jumble + word[position]
-
-    # word[:position] - "пит"
-    # word[(position + 1):] - "н"
-    # word = "пит" + "н"
     word = word[:position] + word[(position + 1):]
 
 # начало игры
