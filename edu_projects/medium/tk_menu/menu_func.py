@@ -12,12 +12,12 @@ def clearwin():
         child.destroy()
 
 
-def win1():
+def main_menu():
     '''Create the main window'''
     clearwin()
-    b1 = tkinter.Button(mframe, command=win2, text='Window 2')
+    b1 = tkinter.Button(mframe, command=win2, text='Начать игру')
     b1.pack()
-    b2 = tkinter.Button(mframe, command=win3, text='Window 3')
+    b2 = tkinter.Button(mframe, command=win3, text='об игре')
     b2.pack()
 
 
@@ -26,7 +26,7 @@ def win2():
     clearwin()
     entry1 = tkinter.Entry(mframe)
     entry1.pack()
-    back = tkinter.Button(mframe, command=win1, text='Back')
+    back = tkinter.Button(mframe, command=main_menu, text='Назад')
     back.pack()
 
 
@@ -35,10 +35,10 @@ def win3():
     clearwin()
     label1 = tkinter.Label(mframe, text='This is the third window!')
     label1.pack()
-    back = tkinter.Button(mframe, command=win1, text='Back')
+    back = tkinter.Button(mframe, command=main_menu, text='Назад')
     back.pack()
 
 
-win1()
+main_menu()
 
 main.mainloop()
