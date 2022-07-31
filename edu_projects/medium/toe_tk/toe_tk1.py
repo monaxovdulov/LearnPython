@@ -8,16 +8,19 @@ count = 0
 def b_click(b):
     b["text"] = "X"
 
-b1 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace",
+
+color = "grey"
+
+b1 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg=color,
             command=lambda: b_click(b1))
-b2 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace")
-b3 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace")
-b4 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace")
-b5 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace")
-b6 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace")
-b7 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace")
-b8 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace")
-b9 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace")
+b2 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg=color)
+b3 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg=color)
+b4 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg=color)
+b5 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg=color)
+b6 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg=color)
+b7 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg=color)
+b8 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg=color)
+b9 = Button(root, text=" ", font=("Helvetica", 20), height=3, width=6, bg=color)
 
 # Grid our buttons to the screen
 b1.grid(row=0, column=0)
