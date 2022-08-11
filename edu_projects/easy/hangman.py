@@ -100,6 +100,7 @@ HANGMAN = (
 MAX_WRONG = len(HANGMAN) - 1
 
 WORDS = ("СТОЛОВАЯ", "РЕСТОРАН", "ШКОЛА", "СПРАВКА", "АНЕКДОТ", "ЗАВТРАК", "БИЗНЕС")
+word = random.choice(WORDS)
 so_far = "-" * len(word)
 
 wrong = 0
